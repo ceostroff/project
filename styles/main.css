@@ -1,0 +1,26 @@
+html {
+    margin: auto;
+    background-color: #AFD8E4;
+    padding: 5px 15px;
+}
+
+#mapid2 { height: 800px;
+        width: auto;
+}
+
+h1 {
+    font-family: 'Montserrat', Aial, sans-serif;
+}
+
+h2, p {
+        font-family: 'Montserrat', Aial, sans-serif;
+
+}
+@media (max-width: 800px) {
+    #mapid{
+        height: 400px;
+    }
+    #mapid2{
+        height: 400px;
+    }
+}
