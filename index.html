@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bootstrap/css/agency.min.css">
     <link rel="stylesheet"  href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
     <script src="js/highcharts.js"></script>
@@ -23,45 +24,84 @@
 
 <div id="mapid2"></div>
     
-<form>
+
 <div class="form-group">
     <label>1. Do you plan on attending a private or public university?</label>                
     
-    <div class="radio"><label><input id="inputPublic" type="radio" name="q2" value="a"> Lake Superior  </label></div>
-    <div class="radio"><label><input id="inputPrivate" type="radio" name="q2" value="b"> Lake Huron </label></div>
+    <div class="radio"><label><input id="inputPublic" type="radio" name="type" value="a">Public</label></div>
+    <div class="radio"><label><input id="inputPrivate" type="radio" name="type" value="b">Private</label></div>
      </div>
     <div class="form-group">
     <label>2. Which region of Florida do you want to go to school in? </label>
-    <div class="checkbox"><label><input id="inputRegion1" type="checkbox" name="q3" value="a"> North </label></div>
-    <div class="checkbox"><label><input id="inputRegion2" type="checkbox" name="q3" value="b"> Central </label></div>
-    <div class="checkbox"><label><input id="inputRegion3" type="checkbox" name="q3" value="c"> South </label></div>
+    <div class="checkbox"><label><input id="inputRegion" type="checkbox" name="q3" value="a"> North </label></div>
+    <div class="checkbox"><label><input id="inputRegion" type="checkbox" name="q3" value="b"> Central </label></div>
+    <div class="checkbox"><label><input id="inputRegion" type="checkbox" name="q3" value="c"> South </label></div>
      </div>
      <div class="form-group">
-<div class="form-group">
-<label>3. Which of the following colleges do you want to explore the cost of?</label>
-    <select name="q4" id="q4a">
-    <option value="value1"> Florida Agricultural and Mechanical University </option>
-    <option value="value2"> Flrida Gulf Coast University </option>
-    <option value="value3"> Florida International University </option>
-    <option value="value4"> Florida Polytchnic University </option>
-    <option value="value5"> Florida State University </option>
-    <option value="value6"> New College of Florida </option>
-    <option value="value7"> University of Central Florida </option>
-    <option value="value8"> University of Florida </option>
-    <option value="value9"> University of North Florida </option>
-    <option value="value10"> University of South Florida, St. Petersberg </option>
-    <option value="value11"> University of South Florida, Tampa </option>
-    <option value="value12"> University of West Florida </option>
-    <option value="value13"> University of Miami </option>
-    <option value="value14"> Nova Southeastern University </option>
-    <option value="value15"> Keiser University </option>
-    <option value="value16"> Saint Leo University </option>
-    </select>
+
+    <label>3. Do you have cost restrictions? </label>                
+    
+    <div class="radio"><label><input id="inputYes" type="radio" name="yes" value="a">Yes</label></div>
+    <div class="radio"><label><input id="inputNo" type="radio" name="no" value="b">No</label></div>
      </div>
-</form>    
+        
+<div class="form-group">
+    <label> 4. My maximum range is... </label>
+    <div class="radio1"><label><input id="range1" type="radio" name="q3" value="a">$20,000</label></div>
+    <div class="radio2"><label><input id="range2" type="radio" name="q3" value="b">$30,000</label></div>
+    <div class="radio3"><label><input id="range3" type="radio" name="q3" value="c">$40,000</label></div>
+    <div class="radio4"><label><input id="range4" type="radio" name="q3" value="c">$50,000</label></div>
+    <div class="radio5"><label><input id="range5" type="radio" name="q3" value="c">$60,000</label></div>
+    <div class="radio6"><label><input id="range6" type="radio" name="q3" value="c">$70,000</label></div>
+     </div>
+    <div class="form-group">
+<label for="inputMoney">5. How much did you get (or expect to get) in scholarships? </label>
+<input class="money" type="text" name="q6" id="inputMoney" placeholder="Amount in scholarships">
+     </div>
+        
+<div class="form-group">
+     </div>
+<div id="schooloption">
+    <img class="photo" id="FAMUpic" src="images/famu.jpg" alt="Florida Agricultural and Mechanical University"> 
+    <div class="text" id="FAMUtext"><p>FILLER</p></div>
+    <img class="photo" id="FGCUpic" src="images/fgcu.png" alt="Florida Gulf Coast University"> 
+         <div class="text" id="FGCUtext"> <p>FILLER</p></div>
+    <img class="photo" id="FIUpic" src="images/fiu.png" alt="Florida International University">  
+        <div class="text" id="FIUtext"> <p>FILLER</p></div>
+    <img class="photo" id="FPUpic" src="images/fpu.jpg" alt="Florida Polytchnic University"> 
+        <div class="text" id="FPUtext"> <p>FILLER</p></div>
+    <img class="photo" id="FSUpic" src="images/fsu.png" alt="Florida State University">  
+        <div class="text" id="FSUtext"> <p>FILLER</p></div>
+    <img class="photo" id="NCFpic" src="images/ncf.jpg" alt="New College of Florida"> 
+        <div class="text" id="NCFtext"> <p>FILLER</p></div>
+    <img class="photo" id="UCFpic" src="images/ucf.png" alt="University of Central Florida">  
+        <div class="text" id="UCFtext"><p>FILLER</p> </div>
+    <img class="photo" id="UFpic" src="images/uf.jpg" alt="University of Florida"> 
+        <div class="text" id="UFtext"> <p>FILLER</p></div>
+    <img class="photo" id="UNFpic" src="images/unf.gif" alt="University of North Florida">  
+        <div class="text" id="UNFtext"><p>FILLER</p> </div>
+    <img class="photo" id="USFSPpic" src="images/usfsp.jpg" alt="University of South Florida, St. Petersberg"> 
+        <div class="text" id="USFSPtext"><p>FILLER</p> </div>
+    <img class="photo" id="USFpic" src="images/usf.png" alt="University of South Florida, Tampa">  
+        <div class="text" id="USFtext"> <p>FILLER</p></div>
+    <img class="photo" id="UWFpic" src="images/uwf.png" alt="University of West Florida"> 
+        <div class="text" id="UWFtext"><p>FILLER</p> </div>
+    <img class="photo" id="UMpic" src="images/um.png" alt="University of Miami">  
+        <div class="text" id="UMtext"> <p>FILLER</p></div>
+    <img class="photo" id="NSUpic" src="images/nsu.png" alt="Nova Southeastern University"> 
+        <div class="text" id="NSUtext"><p>FILLER</p> </div>
+    <img class="photo" id="KUpic" src="images/ku.jpeg" alt="Keiser University"> 
+        <div class="text" id="KUtext"> <p>FILLER</p></div>
+    <img class="photo" id="SLUpic" src="images/slu.jpg" alt="Saint Leo University"> 
+        <div class="text" id="SLUtext"><p>FILLER</p> </div>
+</div>
+ 
+    
     
     <script src="js/places.json"></script>
+    <script src="js/schools.json"></script>
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"> </script>
     <script src="js/debt.js"></script>
+    <script src="bootstrap/js/agency.min.js"></script>
 </body>
 </html>

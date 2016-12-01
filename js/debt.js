@@ -11,7 +11,6 @@ for ( var i=0; i < places.length; i++ ) {
     .addTo(mymap2);
 }
 
-
 $(function () {
     Highcharts.chart('container', {
         title: {
@@ -54,4 +53,171 @@ $(function () {
             data: [1190, 1140, 1450, 2070, 2250, 2180, 2680, 3170, 3520]
         }]
     });
+});
+
+$('#FAMUtext').hide();
+  $('#FAMUpic').click(function() {
+    $('#FAMUtext').slideToggle();
+  });
+$('#FGCUtext').hide();
+  $('#FGCUpic').click(function() {
+    $('#FGCUtext').slideToggle();
+  });
+$('#FIUtext').hide();
+  $('#FIUpic').click(function() {
+    $('#FIUtext').slideToggle();
+  });
+$('#FPUtext').hide();
+  $('#FPUpic').click(function() {
+    $('#FPUtext').slideToggle();
+  });
+$('#FSUtext').hide();
+$('#FSUpic').click(function() {
+    $('#FSUtext').slideToggle();
+  });
+$('#NCFtext').hide();
+  $('#NCFpic').click(function() {
+    $('#NCFtext').slideToggle();
+  });
+$('#UCFtext').hide();
+  $('#UCFpic').click(function() {
+    $('#UCFtext').slideToggle();
+  });
+$('#UFtext').hide();
+  $('#UFpic').click(function() {
+    $('#UFtext').slideToggle();
+  });
+$('#UNFtext').hide();
+  $('#UNFpic').click(function() {
+    $('#UNFtext').slideToggle();
+  });
+$('#USFSPtext').hide();
+  $('#USFSPpic').click(function() {
+    $('#USFSPtext').slideToggle();
+  });
+$('#USFtext').hide();
+  $('#USFpic').click(function() {
+    $('#USFtext').slideToggle();
+  });
+$('#UWFtext').hide();
+  $('#UWFpic').click(function() {
+    $('#UWFtext').slideToggle();
+  });
+$('#UMtext').hide();
+  $('#UMpic').click(function() {
+    $('#UMtext').slideToggle();
+  });
+$('#NSUtext').hide();
+  $('#NSUpic').click(function() {
+    $('#NSUtext').slideToggle();
+  });
+$('#KUtext').hide();
+  $('#KUpic').click(function() {
+    $('#KUtext').slideToggle();
+  });
+$('#SLUtext').hide();
+  $('#SLUpic').click(function() {
+    $('#SLUtext').slideToggle();
+  });
+ 
+
+$('#inputPublic').change(function() {
+	p = ($('#inputPublic').val("Public"));
+  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+
+$('#inputPrivate').change(function() {
+	p = ($('#inputPrivate').val("Private"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
+});
+
+$('#inputPublic').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputNo').val("No"));
+  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+
+$('#inputPrivate').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputNo').val("No"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
+});
+
+$('#range1').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputYes').val("Yes"));
+    ($('#range1').val("$20,000"));
+  $('#FAMUpic, #FAUpic, #FIUpic, #FPUpic, #FSUpic, #UCFpic, #UFpic, #UNFpic, #USFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+$('#range2').change(function() {
+	($('#inputPublic').val('Public'));
+    ($('#inputYes').val('Yes'));
+    ($('#range2').val("$30,000"));
+  $('#UMpic, #NSUpic, #SLUpic').hide();
+});
+$('#range3').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputYes').val("Yes"));
+    ($('#range3').val("$40,000"));
+  $('#UMpic, #NSUpic').hide();
+});
+$('#range4').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputYes').val("Yes"));
+    ($('#range4').val("$50,000"));
+  $('#UMpic').hide();
+});
+$('#range5').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputYes').val("Yes"));
+    ($('#range5').val("$60,000"));
+  $('#UMpic').hide();
+});
+$('#range6').change(function() {
+	($('#inputPublic').val("Public"));
+    ($('#inputYes').val("Yes"));
+    ($('#range6').val("$70,000"));
+  $('').hide();
+});
+
+$('#range1').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range1').val("$20,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+ 
+$('#range2').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range2').val("$30,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #SLUpic').hide();
+});
+
+$('#range3').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range3').val("$40,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic').hide();
+});
+
+$('#range4').change(function() {
+    ($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range4').val("$50,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range5').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range5').val("$60,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range6').change(function() {
+	($('#inputPrivate').val("Private"));
+    ($('#inputYes').val("Yes"));
+    ($('#range6').val("$70,000"));
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });

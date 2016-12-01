@@ -1,11 +1,12 @@
 html {
     margin: auto;
-    background-color: #AFD8E4;
     padding: 5px 15px;
 }
 
-#mapid2 { height: 800px;
-        width: auto;
+#mapid2, #container { 
+    height: 500px;
+    width: 70%;
+    margin: auto;
 }
 
 h1 {
@@ -14,13 +15,12 @@ h1 {
 
 h2, p {
         font-family: 'Montserrat', Aial, sans-serif;
+        
 
 }
-@media (max-width: 800px) {
-    #mapid{
-        height: 400px;
-    }
-    #mapid2{
-        height: 400px;
-    }
+.photo {
+    height: 200px;
+    width: 200px;
 }
+
+.template { display:none; }
