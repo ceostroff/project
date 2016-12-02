@@ -54,7 +54,11 @@ $(function () {
         }]
     });
     
+<<<<<<< HEAD
     
+=======
+    /*
+>>>>>>> origin/gh-pages
 $('.selections').change(function(){
   if($('#publicprivate').val() == 'public') {
   var publicschools = for (var i=0; i < schools.length; i++) }
@@ -68,7 +72,11 @@ $('.selections').change(function(){
 	}
 });
 
+<<<<<<< HEAD
 /*
+=======
+*/
+>>>>>>> origin/gh-pages
     
     $('#inputPublic').change(function() {
 p = ($('#inputPublic').val());
@@ -144,8 +152,14 @@ $('#range6').change(function() {
 if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
+<<<<<<< HEAD
     */
 $('#FAMUpic').click(function() {
+=======
+    
+$('#FAMUtext').hide();
+  $('#FAMUpic').click(function() {
+>>>>>>> origin/gh-pages
     $('#FAMUtext').slideToggle();
   });
   $('#FGCUpic').click(function() {
@@ -194,7 +208,11 @@ $('#FSUpic').click(function() {
     $('#SLUtext').slideToggle();
   });
     
+<<<<<<< HEAD
     
+=======
+    /*
+>>>>>>> origin/gh-pages
 $('.photo').on('change', function(){
     var answers = $('img.clicked').val();
 	for (var i=0; i < schools.length; i++) {
@@ -204,7 +222,11 @@ $('.photo').on('change', function(){
     } // end if
    } // end for
 });
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> origin/gh-pages
  });
 
 
