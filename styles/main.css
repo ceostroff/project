@@ -24,3 +24,7 @@ h2, p {
 }
 
 .template { display:none; }
+
+label {
+  display: block;
+}
