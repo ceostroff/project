@@ -145,51 +145,67 @@ if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
     
-$('#FAMUpic').click(function() {
+$('#FAMUtext').hide();
+  $('#FAMUpic').click(function() {
     $('#FAMUtext').slideToggle();
   });
+$('#FGCUtext').hide();
   $('#FGCUpic').click(function() {
     $('#FGCUtext').slideToggle();
   });
+$('#FIUtext').hide();
   $('#FIUpic').click(function() {
     $('#FIUtext').slideToggle();
   });
+$('#FPUtext').hide();
   $('#FPUpic').click(function() {
     $('#FPUtext').slideToggle();
   });
+$('#FSUtext').hide();
 $('#FSUpic').click(function() {
     $('#FSUtext').slideToggle();
   });
+$('#NCFtext').hide();
   $('#NCFpic').click(function() {
     $('#NCFtext').slideToggle();
   });
+$('#UCFtext').hide();
   $('#UCFpic').click(function() {
     $('#UCFtext').slideToggle();
   });
+$('#UFtext').hide();
   $('#UFpic').click(function() {
     $('#UFtext').slideToggle();
   });
+$('#UNFtext').hide();
   $('#UNFpic').click(function() {
     $('#UNFtext').slideToggle();
   });
+$('#USFSPtext').hide();
   $('#USFSPpic').click(function() {
     $('#USFSPtext').slideToggle();
   });
+$('#USFtext').hide();
   $('#USFpic').click(function() {
     $('#USFtext').slideToggle();
   });
+$('#UWFtext').hide();
   $('#UWFpic').click(function() {
     $('#UWFtext').slideToggle();
   });
+$('#UMtext').hide();
   $('#UMpic').click(function() {
     $('#UMtext').slideToggle();
   });
+$('#NSUtext').hide();
   $('#NSUpic').click(function() {
     $('#NSUtext').slideToggle();
   });
+$('#KUtext').hide();
   $('#KUpic').click(function() {
     $('#KUtext').slideToggle();
   });
+$('#SLUtext').hide();
   $('#SLUpic').click(function() {
     $('#SLUtext').slideToggle();
   });
