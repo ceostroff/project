@@ -122,102 +122,76 @@ $('#SLUtext').hide();
  
 
 $('#inputPublic').change(function() {
-	p = ($('#inputPublic').val("Public"));
+	p = ($('#inputPublic').val());
   $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
 });
 
 $('#inputPrivate').change(function() {
-	p = ($('#inputPrivate').val("Private"));
+	p = ($('#inputPrivate').val());
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
 
 $('#inputPublic').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputNo').val("No"));
+	($('#inputPublic').val());
+    ($('#inputNo').val());
   $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
 });
 
 $('#inputPrivate').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputNo').val("No"));
+	($('#inputPrivate').val());
+    ($('#inputNo').val());
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
 
-$('#range1').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputYes').val("Yes"));
-    ($('#range1').val("$20,000"));
+$('.range1').change(function() {
+	if($(this).checked && $('.publicschool').checked)
   $('#FAMUpic, #FAUpic, #FIUpic, #FPUpic, #FSUpic, #UCFpic, #UFpic, #UNFpic, #USFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
 });
-$('#range2').change(function() {
-	($('#inputPublic').val('Public'));
-    ($('#inputYes').val('Yes'));
-    ($('#range2').val("$30,000"));
+$('.range2').change(function() {
+	if($(this).val() == '30k' && $('#inputPublic').val() == 'public')
   $('#UMpic, #NSUpic, #SLUpic').hide();
 });
-$('#range3').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputYes').val("Yes"));
-    ($('#range3').val("$40,000"));
+$('.range3').change(function() {
+	if($(this).val() == '40k' && $('#inputPublic').val() == 'public')
   $('#UMpic, #NSUpic').hide();
 });
-$('#range4').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputYes').val("Yes"));
-    ($('#range4').val("$50,000"));
+$('.range4').change(function() {
+	if($(this).val() == '50k' && $('#inputPublic').val() == 'public')
   $('#UMpic').hide();
 });
-$('#range5').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputYes').val("Yes"));
-    ($('#range5').val("$60,000"));
+$('.range5').change(function() {
+	if($(this).val() == '60k' && $('#inputPublic').val() == 'public')
   $('#UMpic').hide();
 });
-$('#range6').change(function() {
-	($('#inputPublic').val("Public"));
-    ($('#inputYes').val("Yes"));
-    ($('#range6').val("$70,000"));
+$('.range6').change(function() {
+	if($(this).val() == '70k' && $('#inputPublic').val() == 'public')
   $('').hide();
 });
 
 $('#range1').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range1').val("$20,000"));
+	if($(this).val() == '20k' && $('#inputPrivate').checked)
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
 });
- 
-$('#range2').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range2').val("$30,000"));
+ $('#range2').change(function() {
+	if($(this).val() == '30k' && $('#inputPrivate').checked)
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #SLUpic').hide();
 });
-
 $('#range3').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range3').val("$40,000"));
+	if($(this).val() == '40k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic').hide();
 });
 
 $('#range4').change(function() {
-    ($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range4').val("$50,000"));
+	if($(this).val() == '50k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
 });
 
 $('#range5').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range5').val("$60,000"));
+	if($(this).val() == '60k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
 });
 
 $('#range6').change(function() {
-	($('#inputPrivate').val("Private"));
-    ($('#inputYes').val("Yes"));
-    ($('#range6').val("$70,000"));
+	if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
