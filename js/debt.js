@@ -223,11 +223,6 @@ $('.photo').on('change', function(){
 */
  });
 
-<<<<<<< HEAD
-
-   
-
-=======
 $('#inputPublic').change(function() {
 	p = ($('#inputPublic').val());
   $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
@@ -302,4 +297,4 @@ $('#range6').change(function() {
 	if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
->>>>>>> third commit
+
