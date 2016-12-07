@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bootstrap/css/agency.min.css">
     <link rel="stylesheet"  href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
-    <script src="js/highcharts.js"></script>
-    <script src="js/themes/sand-signika.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
 	<title>Cost of College</title>
     </head>
 <body>
@@ -19,24 +16,15 @@
     
 <p>So how much will college cost you? How much is it likely to increase by the time you finish college? Take the quiz and find out.</p>
 <!-- add the div and the code below this comment -->
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="container"></div>
 <p><a href="https://trends.collegeboard.org/college-pricing/figures-tables/tuition-and-fees-and-room-and-board-over-time-1976-77_2016-17-selected-years">Source:</a> The College Board</p>
 
 <div id="mapid2"></div>
     
-
 <div class="form-group">
     <label>1. Do you plan on attending a private or public university?</label>                
-<<<<<<< HEAD
-    <div><label><input class="selections" id="publicprivate" type="radio" name="q1" value="public">Public</label></div>
-    <div><label><input class="selections" id="publicprivate" type="radio" name="q1" value="private">Private</label></div>
-
-=======
-    
-
-    <div class="radio"><label><input id="inputPublic" type="radio" name="type" value="a">Public</label></div>
-    <div class="radio"><label><input id="inputPrivate" type="radio" name="type" value="b">Private</label></div>
->>>>>>> origin/gh-pages
+    <div><label><input class="selection1" id="publicprivate" type="radio" name="q1" value="public">Public</label></div>
+    <div><label><input class="selection2" id="privatepublic" type="radio" name="q1" value="private">Private</label></div>
      </div>
     <div class="form-group">
     <label>2. Which region of Florida do you want to go to school in? </label>
@@ -54,12 +42,12 @@
         
 <div class="form-group">
     <label> 4. My maximum range is... </label>
-    <div><label><input id="range1" class="selections" type="radio" name="q3" value="20k">$20,000</label></div>
-    <div><label><input id="range2" class="selections" type="radio" name="q3" value="30k">$30,000</label></div>
-    <div><label><input id="range3" class="selections" type="radio" name="q3" value="40k">$40,000</label></div>
-    <div><label><input id="range4" class="selections" type="radio" name="q3" value="50k">$50,000</label></div>
-    <div><label><input id="range5" class="selections" type="radio" name="q3" value="60k">$60,000</label></div>
-    <div><label><input id="range6" class="selections" type="radio" name="q3" value="70k">$70,000</label></div>
+    <div><label><input id="range1" class="part1" type="radio" name="q3" value="20k">$20,000</label></div>
+    <div><label><input id="range2" class="part2" type="radio" name="q3" value="30k">$30,000</label></div>
+    <div><label><input id="range3" class="part3" type="radio" name="q3" value="40k">$40,000</label></div>
+    <div><label><input id="range4" class="part4" type="radio" name="q3" value="50k">$50,000</label></div>
+    <div><label><input id="range5" class="part5" type="radio" name="q3" value="60k">$60,000</label></div>
+    <div><label><input id="range6" class="part6" type="radio" name="q3" value="70k">$70,000</label></div>
      </div>
     <div class="scholarship">
 <label for="inputMoney">5. How much did you get (or expect to get) in scholarships? </label>
@@ -67,42 +55,42 @@
      </div>
         
 <div id="schooloption">
-    <img class="photo" id="FAMUpic" src="images/famu.jpg" value="FAMU" alt="Florida Agricultural and Mechanical University"> 
-<p id="response"></p>
-    <img class="photo" id="FGCUpic" src="images/fgcu.png" value="FGCU" alt="Florida Gulf Coast University"> 
-         <p id="response"></p>
-    <img class="photo" id="FIUpic" src="images/fiu.png" value="FIU" alt="Florida International University">  
-        <p id="response"></p>
-    <img class="photo" id="FPUpic" src="images/fpu.jpg" value="FPU" alt="Florida Polytchnic University"> 
-        <p id="response"></p>
-    <img class="photo" id="FSUpic" src="images/fsu.png" value="FSU" alt="Florida State University">  
-        <p id="response"></p>
-    <img class="photo" id="NCFpic" src="images/ncf.jpg" value="NCF" alt="New College of Florida"> 
-        <p id="response"></p>
-    <img class="photo" id="UCFpic" src="images/ucf.png" value="UCF" alt="University of Central Florida">  
-        <p id="response"></p>
-    <img class="photo" id="UFpic" src="images/uf.jpg" value="UF" alt="University of Florida"> 
-        <p id="response"></p>
-    <img class="photo" id="UNFpic" src="images/unf.gif" value="UNF" alt="University of North Florida">  
-        <p id="response"></p>
-    <img class="photo" id="USFSPpic" src="images/usfsp.jpg" value="USFSP" alt="University of South Florida, St. Petersberg"> 
-        <p id="response"></p>
-    <img class="photo" id="USFpic" src="images/usf.png" value="USF" alt="University of South Florida, Tampa">  
-        <p id="response"></p>
-    <img class="photo" id="UWFpic" src="images/uwf.png" value="UWF" alt="University of West Florida"> 
-        <p id="response"></p>
-    <img class="photo" id="UMpic" src="images/um.png" value="UM" alt="University of Miami">  
-        <p id="response"></p>
-    <img class="photo" id="NSUpic" src="images/nsu.png" value="NSU" alt="Nova Southeastern University"> 
-       <p id="response"></p>
-    <img class="photo" id="KUpic" src="images/ku.jpeg" value="KU" alt="Keiser University"> 
-        <p id="response"></p>
-    <img class="photo" id="SLUpic" src="images/slu.jpg" value="SLU" alt="Saint Leo University"> 
-        <p id="response"></p>
+    <img class="photo1" id="FAMUpic" src="images/famu.jpg" alt="Florida Agricultural and Mechanical University"> 
+<p id="FAMUtext"></p>
+    <img class="photo2" id="FGCUpic" src="images/fgcu.png" alt="Florida Gulf Coast University"> 
+         <p id="FGCUtext"></p>
+    <img class="photo3" id="FIUpic" src="images/fiu.png" alt="Florida International University">  
+        <p id="FIUtext"></p>
+    <img class="photo4" id="FPUpic" src="images/fpu.jpg" alt="Florida Polytchnic University"> 
+        <p id="FPUtext"></p>
+    <img class="photo5" id="FSUpic" src="images/fsu.png" alt="Florida State University">  
+        <p id="FSUtext"></p>
+    <img class="photo6" id="NCFpic" src="images/ncf.jpg" alt="New College of Florida"> 
+        <p id="NCFtext"></p>
+    <img class="photo7" id="UCFpic" src="images/ucf.png" alt="University of Central Florida">  
+        <p id="UCFtext"></p>
+    <img class="photo8" id="UFpic" src="images/uf.jpg" alt="University of Florida"> 
+        <p id="UFtext"></p>
+    <img class="photo9" id="UNFpic" src="images/unf.gif" alt="University of North Florida">  
+        <p id="UNFtext"></p>
+    <img class="photo10" id="USFSPpic" src="images/usfsp.jpg" alt="University of South Florida, St. Petersberg"> 
+        <p id="USFSPtext"></p>
+    <img class="photo11" id="USFpic" src="images/usf.png" alt="University of South Florida, Tampa">  
+        <p id="USFtext"></p>
+    <img class="photo12" id="UWFpic" src="images/uwf.png" alt="University of West Florida"> 
+        <p id="UWFtext"></p>
+    <img class="photo13" id="UMpic" src="images/um.png" alt="University of Miami">  
+        <p id="UMtext"></p>
+    <img class="photo14" id="NSUpic" src="images/nsu.png" alt="Nova Southeastern University"> 
+       <p id="NSUtext"></p>
+    <img class="photo15" id="KUpic" src="images/ku.jpeg" alt="Keiser University"> 
+        <p id="KUtext"></p>
+    <img class="photo16" id="SLUpic" src="images/slu.jpg" alt="Saint Leo University"> 
+        <p id="SLUtext"></p>
 </div>
- 
-    
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/themes/sand-signika.js"></script>
     <script src="js/places.json"></script>
     <script src="js/schools.json"></script>
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"> </script>

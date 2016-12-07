@@ -54,7 +54,120 @@ $(function () {
         }]
     });
     
+   $('#FAMUtext').hide();
+  $('#FAMUpic').click(function() {
+    $('#FAMUtext').slideToggle();
+  });
+$('#FGCUtext').hide();
+  $('#FGCUpic').click(function() {
+    $('#FGCUtext').slideToggle();
+  });
+$('#FIUtext').hide();
+  $('#FIUpic').click(function() {
+    $('#FIUtext').slideToggle();
+  });
+$('#FPUtext').hide();
+  $('#FPUpic').click(function() {
+    $('#FPUtext').slideToggle();
+  });
+$('#FSUtext').hide();
+$('#FSUpic').click(function() {
+    $('#FSUtext').slideToggle();
+  });
+$('#NCFtext').hide();
+  $('#NCFpic').click(function() {
+    $('#NCFtext').slideToggle();
+  });
+$('#UCFtext').hide();
+  $('#UCFpic').click(function() {
+    $('#UCFtext').slideToggle();
+  });
+$('#UFtext').hide();
+  $('#UFpic').click(function() {
+    $('#UFtext').slideToggle();
+  });
+$('#UNFtext').hide();
+  $('#UNFpic').click(function() {
+    $('#UNFtext').slideToggle();
+  });
+$('#USFSPtext').hide();
+  $('#USFSPpic').click(function() {
+    $('#USFSPtext').slideToggle();
+  });
+$('#USFtext').hide();
+  $('#USFpic').click(function() {
+    $('#USFtext').slideToggle();
+  });
+$('#UWFtext').hide();
+  $('#UWFpic').click(function() {
+    $('#UWFtext').slideToggle();
+  });
+$('#UMtext').hide();
+  $('#UMpic').click(function() {
+    $('#UMtext').slideToggle();
+  });
+$('#NSUtext').hide();
+  $('#NSUpic').click(function() {
+    $('#NSUtext').slideToggle();
+  });
+$('#KUtext').hide();
+  $('#KUpic').click(function() {
+    $('#KUtext').slideToggle();
+  });
+$('#SLUtext').hide();
+  $('#SLUpic').click(function() {
+    $('#SLUtext').slideToggle();
+  });
     
+   $('#publicprivate').change(function() {
+p = ($('#publicprivate').val());
+  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+   
+$('#range1').change(function() {
+if($(this).val() == '20k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+ $('#range2').change(function() {
+if($(this).val() == '30k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #SLUpic').hide();
+});
+$('#range3').change(function() {
+if($(this).val() == '40k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic').hide();
+});
+
+$('#range4').change(function() {
+if($(this).val() == '50k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range5').change(function() {
+if($(this).val() == '60k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range6').change(function() {
+if($(this).val() == '70k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
+});
+    
+$('.selection1').change(function() {
+p = ($('.selection1').val() == 'public');
+  $('.photo1, .photo2, .photo3, .photo4').hide();
+});
+    
+$('.part1').change(function() {
+if($(this).val() == '20k' && $('.selection1').val() == 'public')
+  $('.photo1, .photo4, .photo11, .photo12').show();
+});    
+    $('.part2').change(function() {
+if($(this).val() == '30k' && $('.selection1').val() == 'public')
+  $('.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7, .photo8, .photo9, .photo10, .photo11, .photo12').show();
+});  
+});
+   
+    /*
 $('.selections').change(function(){
   if($('#publicprivate').val() == 'public') {
   var publicschools = for (var i=0; i < schools.length; i++) }
@@ -67,19 +180,19 @@ $('.selections').change(function(){
 		if(elements[i].checked.val() == 'north' && publicschools.region == 'north') = var publicnorth;
 	}
 });
+$('.photo').on('change', function(){
+    var answers = $('img.clicked').val();
+	for (var i=0; i < schools.length; i++) {
+  	if (schools[i].schoolName == foobar) {
+			$('#response').text("In state Tuition: " + schools[i].inState + 
+  			" Out of state Tuition: " + schools[i].outState + "Books: " + schools[i].books + " Transportation: " + schools[i].transport + " Other expenses: " + schools[i].other + " In state total: " + schools[i].intotal + " Out of state total: " + schools[i].outtotal);
+    } // end if
+   } // end for
+});
 
-/*
+    */
     
-    $('#inputPublic').change(function() {
-p = ($('#inputPublic').val());
-  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
-});
-
-$('#inputPrivate').change(function() {
-p = ($('#inputPrivate').val());
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
-});
-
+/*
 $('#inputPublic').change(function() {
 ($('#inputPublic').val());
     ($('#inputNo').val());
@@ -145,161 +258,9 @@ if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
     */
-$('#FAMUtext').hide();
-  $('#FAMUpic').click(function() {
-    $('#FAMUtext').slideToggle();
-  });
-$('#FGCUtext').hide();
-  $('#FGCUpic').click(function() {
-    $('#FGCUtext').slideToggle();
-  });
-$('#FIUtext').hide();
-  $('#FIUpic').click(function() {
-    $('#FIUtext').slideToggle();
-  });
-$('#FPUtext').hide();
-  $('#FPUpic').click(function() {
-    $('#FPUtext').slideToggle();
-  });
-$('#FSUtext').hide();
-$('#FSUpic').click(function() {
-    $('#FSUtext').slideToggle();
-  });
-$('#NCFtext').hide();
-  $('#NCFpic').click(function() {
-    $('#NCFtext').slideToggle();
-  });
-$('#UCFtext').hide();
-  $('#UCFpic').click(function() {
-    $('#UCFtext').slideToggle();
-  });
-$('#UFtext').hide();
-  $('#UFpic').click(function() {
-    $('#UFtext').slideToggle();
-  });
-$('#UNFtext').hide();
-  $('#UNFpic').click(function() {
-    $('#UNFtext').slideToggle();
-  });
-$('#USFSPtext').hide();
-  $('#USFSPpic').click(function() {
-    $('#USFSPtext').slideToggle();
-  });
-$('#USFtext').hide();
-  $('#USFpic').click(function() {
-    $('#USFtext').slideToggle();
-  });
-$('#UWFtext').hide();
-  $('#UWFpic').click(function() {
-    $('#UWFtext').slideToggle();
-  });
-$('#UMtext').hide();
-  $('#UMpic').click(function() {
-    $('#UMtext').slideToggle();
-  });
-$('#NSUtext').hide();
-  $('#NSUpic').click(function() {
-    $('#NSUtext').slideToggle();
-  });
-$('#KUtext').hide();
-  $('#KUpic').click(function() {
-    $('#KUtext').slideToggle();
-  });
-$('#SLUtext').hide();
-  $('#SLUpic').click(function() {
-    $('#SLUtext').slideToggle();
-  });
+
     
     /*
-$('.photo').on('change', function(){
-    var answers = $('img.clicked').val();
-	for (var i=0; i < schools.length; i++) {
-  	if (schools[i].schoolName == foobar) {
-			$('#response').text("In state Tuition: " + schools[i].inState + 
-  			" Out of state Tuition: " + schools[i].outState + "Books: " + schools[i].books + " Transportation: " + schools[i].transport + " Other expenses: " + schools[i].other + " In state total: " + schools[i].intotal + " Out of state total: " + schools[i].outtotal);
-    } // end if
-   } // end for
-});
+
 */
- });
 
-<<<<<<< HEAD
-
-   
-
-=======
-$('#inputPublic').change(function() {
-	p = ($('#inputPublic').val());
-  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
-});
-
-$('#inputPrivate').change(function() {
-	p = ($('#inputPrivate').val());
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
-});
-
-$('#inputPublic').change(function() {
-	($('#inputPublic').val());
-    ($('#inputNo').val());
-  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
-});
-
-$('#inputPrivate').change(function() {
-	($('#inputPrivate').val());
-    ($('#inputNo').val());
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
-});
-
-$('.range1').change(function() {
-	if($(this).checked && $('.publicschool').checked)
-  $('#FAMUpic, #FAUpic, #FIUpic, #FPUpic, #FSUpic, #UCFpic, #UFpic, #UNFpic, #USFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
-});
-$('.range2').change(function() {
-	if($(this).val() == '30k' && $('#inputPublic').val() == 'public')
-  $('#UMpic, #NSUpic, #SLUpic').hide();
-});
-$('.range3').change(function() {
-	if($(this).val() == '40k' && $('#inputPublic').val() == 'public')
-  $('#UMpic, #NSUpic').hide();
-});
-$('.range4').change(function() {
-	if($(this).val() == '50k' && $('#inputPublic').val() == 'public')
-  $('#UMpic').hide();
-});
-$('.range5').change(function() {
-	if($(this).val() == '60k' && $('#inputPublic').val() == 'public')
-  $('#UMpic').hide();
-});
-$('.range6').change(function() {
-	if($(this).val() == '70k' && $('#inputPublic').val() == 'public')
-  $('').hide();
-});
-
-$('#range1').change(function() {
-	if($(this).val() == '20k' && $('#inputPrivate').checked)
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
-});
- $('#range2').change(function() {
-	if($(this).val() == '30k' && $('#inputPrivate').checked)
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #SLUpic').hide();
-});
-$('#range3').change(function() {
-	if($(this).val() == '40k' && $('#inputPrivate').val() == 'private')
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic').hide();
-});
-
-$('#range4').change(function() {
-	if($(this).val() == '50k' && $('#inputPrivate').val() == 'private')
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
-});
-
-$('#range5').change(function() {
-	if($(this).val() == '60k' && $('#inputPrivate').val() == 'private')
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
-});
-
-$('#range6').change(function() {
-	if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
-  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
-});
->>>>>>> third commit
