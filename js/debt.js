@@ -189,6 +189,21 @@ $('.photo').on('change', function(){
     } // end if
    } // end for
 });
+<<<<<<< HEAD
+=======
+*/
+ });
+
+$('#inputPublic').change(function() {
+	p = ($('#inputPublic').val());
+  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+
+$('#inputPrivate').change(function() {
+	p = ($('#inputPrivate').val());
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
+});
+>>>>>>> origin/gh-pages
 
     */
     
@@ -257,10 +272,13 @@ $('#range6').change(function() {
 if($(this).val() == '70k' && $('#inputPrivate').val() == 'private')
   $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
 });
+<<<<<<< HEAD
     */
 
     
     /*
 
 */
+=======
+>>>>>>> origin/gh-pages
 
