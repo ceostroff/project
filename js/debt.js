@@ -141,6 +141,7 @@ $('#SLUpic').hide();
   });
  
     
+<<<<<<< HEAD
     // WHEN ANY FORM ELEMENT changes ...
 // listen for changes in the selections in the form elements
 $('#questions').on('change', 'input', function() {
@@ -226,3 +227,52 @@ function matchRegions(allRegions) {
     }
    
 });
+=======
+   $('#publicprivate').change(function() {
+p = ($('#publicprivate').val());
+  $('#UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+   
+$('#range1').change(function() {
+if($(this).val() == '20k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #KUpic, #SLUpic').hide();
+});
+ $('#range2').change(function() {
+if($(this).val() == '30k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic, #SLUpic').hide();
+});
+$('#range3').change(function() {
+if($(this).val() == '40k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic, #NSUpic').hide();
+});
+
+$('#range4').change(function() {
+if($(this).val() == '50k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range5').change(function() {
+if($(this).val() == '60k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic, #UMpic').hide();
+});
+
+$('#range6').change(function() {
+if($(this).val() == '70k' && $('#privatepublic').val() == 'private')
+  $('#FAMUpic, #FGCUpic, #FIUpic, #FPUpic, #FSUpic, #NCFpic, #UCFpic, #UFpic, #UNFpic, #USFSPpic, #USFpic, #UWFpic').hide();
+});
+    
+$('.selection1').change(function() {
+p = ($('.selection1').val() == 'public');
+  $('.photo1, .photo2, .photo3, .photo4').hide();
+});
+    
+$('.part1').change(function() {
+if($(this).val() == '20k' && $('.selection1').val() == 'public')
+  $('.photo1, .photo4, .photo11, .photo12').show();
+});    
+    $('.part2').change(function() {
+if($(this).val() == '30k' && $('.selection1').val() == 'public')
+  $('.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7, .photo8, .photo9, .photo10, .photo11, .photo12').show();
+});  
+});
+>>>>>>> origin/gh-pages
