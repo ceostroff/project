@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="bootstrap/css/agency.min.css">
     <link rel="stylesheet"  href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css">
     <link rel="stylesheet" href="styles/main.css">
-	<title>Cost of College</title>
+<title>Cost of College</title>
     </head>
 <body>
+
 
 <h1>The Rising Cost of College</h1>
 <p>Since the 1970s, the cost of college has been rising rapidly across the country, according to the <a href="http://trends.collegeboard.org/sites/default/files/2015-trends-college-pricing-final-508.pdf"> College Board</a> While Florida's tuition increases have been relatively low compared with the national average, recent budget cuts to Florida's higher education could result in increased tuition in the future, according to the <a href="http://www.demos.org/sites/default/files/publications/Florida_HigherEd_StateCuts_Factsheet.pdf">Research Institute on Social and Economic Policy</a>.</p>
@@ -21,78 +22,286 @@
 
 <div id="mapid2"></div>
     
-<div class="form-group">
-    <label>1. Do you plan on attending a private or public university?</label>                
-<<<<<<< HEAD
-    <div><label><input class="selection1" id="publicprivate" type="radio" name="q1" value="public">Public</label></div>
-    <div><label><input class="selection2" id="privatepublic" type="radio" name="q1" value="private">Private</label></div>
-=======
-    <div><label><input class="selections" id="publicprivate" type="radio" name="q1" value="public">Public</label></div>
-    <div><label><input class="selections" id="publicprivate" type="radio" name="q1" value="private">Private</label></div>
+<div id="questions">
+    <div>
+    <label>1. Do you plan on attending a private or public university?</label>     
 
->>>>>>> origin/gh-pages
+    <div><label><input type="radio" name="q1" value="public">Public</label></div>
+    <div><label><input type="radio" name="q1" value="private">Private</label></div>
      </div>
-    <div class="form-group">
+    <div>
     <label>2. Which region of Florida do you want to go to school in? </label>
-    <div><label><input class="selections" id="inputRegion" type="checkbox" name="q3" value="north"> North </label></div>
-    <div><label><input class="selections" id="inputRegion" type="checkbox" name="q3" value="central"> Central </label></div>
-    <div><label><input class="selections" id="inputRegion" type="checkbox" name="q3" value="south"> South </label></div>
-     </div>
-     <div class="form-group">
-
-    <label>3. Do you have cost restrictions? </label>                
-    
-    <div><label><input class="selections" id="inputYes" type="radio" name="yes" value="yes">Yes</label></div>
-    <div><label><input class="selections" id="inputNo" type="radio" name="no" value="no">No</label></div>
+    <div><label><input type="checkbox" name="q2" value="north"> North </label></div>
+    <div><label><input type="checkbox" name="q2" value="central"> Central </label></div>
+    <div><label><input type="checkbox" name="q2" value="south"> South </label></div>
      </div>
         
-<div class="form-group">
-    <label> 4. My maximum range is... </label>
-    <div><label><input id="range1" class="part1" type="radio" name="q3" value="20k">$20,000</label></div>
-    <div><label><input id="range2" class="part2" type="radio" name="q3" value="30k">$30,000</label></div>
-    <div><label><input id="range3" class="part3" type="radio" name="q3" value="40k">$40,000</label></div>
-    <div><label><input id="range4" class="part4" type="radio" name="q3" value="50k">$50,000</label></div>
-    <div><label><input id="range5" class="part5" type="radio" name="q3" value="60k">$60,000</label></div>
-    <div><label><input id="range6" class="part6" type="radio" name="q3" value="70k">$70,000</label></div>
+<div>
+    <label> 3. My maximum range is... </label>
+    <div><label><input type="radio" name="q3" value="20000">$20,000</label></div>
+    <div><label><input type="radio" name="q3" value="30000">$30,000</label></div>
+    <div><label><input type="radio" name="q3" value="40000">$40,000</label></div>
+    <div><label><input type="radio" name="q3" value="50000">$50,000</label></div>
+    <div><label><input type="radio" name="q3" value="60000">$60,000</label></div>
+    <div><label><input type="radio" name="q3" value="70000">$70,000</label></div>
      </div>
-    <div class="scholarship">
-<label for="inputMoney">5. How much did you get (or expect to get) in scholarships? </label>
-<input class="money" type="text" name="q6" id="inputMoney" placeholder="Amount in scholarships">
      </div>
-        
-<div id="schooloption">
-    <img class="photo1" id="FAMUpic" src="images/famu.jpg" alt="Florida Agricultural and Mechanical University"> 
-<p id="FAMUtext"></p>
-    <img class="photo2" id="FGCUpic" src="images/fgcu.png" alt="Florida Gulf Coast University"> 
-         <p id="FGCUtext"></p>
-    <img class="photo3" id="FIUpic" src="images/fiu.png" alt="Florida International University">  
-        <p id="FIUtext"></p>
-    <img class="photo4" id="FPUpic" src="images/fpu.jpg" alt="Florida Polytchnic University"> 
-        <p id="FPUtext"></p>
-    <img class="photo5" id="FSUpic" src="images/fsu.png" alt="Florida State University">  
-        <p id="FSUtext"></p>
-    <img class="photo6" id="NCFpic" src="images/ncf.jpg" alt="New College of Florida"> 
-        <p id="NCFtext"></p>
-    <img class="photo7" id="UCFpic" src="images/ucf.png" alt="University of Central Florida">  
-        <p id="UCFtext"></p>
-    <img class="photo8" id="UFpic" src="images/uf.jpg" alt="University of Florida"> 
-        <p id="UFtext"></p>
-    <img class="photo9" id="UNFpic" src="images/unf.gif" alt="University of North Florida">  
-        <p id="UNFtext"></p>
-    <img class="photo10" id="USFSPpic" src="images/usfsp.jpg" alt="University of South Florida, St. Petersberg"> 
-        <p id="USFSPtext"></p>
-    <img class="photo11" id="USFpic" src="images/usf.png" alt="University of South Florida, Tampa">  
-        <p id="USFtext"></p>
-    <img class="photo12" id="UWFpic" src="images/uwf.png" alt="University of West Florida"> 
-        <p id="UWFtext"></p>
-    <img class="photo13" id="UMpic" src="images/um.png" alt="University of Miami">  
-        <p id="UMtext"></p>
-    <img class="photo14" id="NSUpic" src="images/nsu.png" alt="Nova Southeastern University"> 
-       <p id="NSUtext"></p>
-    <img class="photo15" id="KUpic" src="images/ku.jpeg" alt="Keiser University"> 
-        <p id="KUtext"></p>
-    <img class="photo16" id="SLUpic" src="images/slu.jpg" alt="Saint Leo University"> 
-        <p id="SLUtext"></p>
+    <div id="schooldescripts">
+<div id="FAMU" class="school">
+    <img class="photo" id="FAMUpic" src="images/famu.jpg" alt="Florida Agricultural and Mechanical University"> 
+<div class="response" id="FAMUtext">
+    <p> Name: Florida Agricultural and Mechanical University</p>
+    <p> Location: Tallahassee, FL </p>
+    <p> In-state Tuition: $4,554 </p>
+    <p> Out-of-state Tuition: $16,494 </p>
+    <p> Room and Board: $10,058 </p>
+    <p> Books: $1,138 </p>
+    <p> Transportation: $1,214 </p>
+    <p> Personal: $5,455 </p>
+    <p> In-state Total: $22,419 </p>
+    <p> Out-of-state Total: $34,359 </p>
+    </div>
+        </div>
+        <div id="FAU" class="school">
+    <img class="photo" id="FAUpic" src="images/fau.png" alt="Florida Atlantic University"> 
+<div class="response" id="FAUtext"> 
+            <p> Name: Florida Atlantic University</p>
+    <p> Location: Boca Raton, FL </p>
+    <p> In-state Tuition: $5,432 </p>
+    <p> Out-of-state Tuition: $21,591 </p>
+    <p> Room and Board: $12,006 </p>
+    <p> Books: $1,320 </p>
+    <p> Transportation: $1,934 </p>
+    <p> Personal: $2,554 </p>
+    <p> In-state Total: $23,246 </p>
+    <p> Out-of-state Total: $39,405 </p>
+    </div>
+        </div>
+<div id="FGCU" class="school">
+    <img class="photo" id="FGCUpic" src="images/fgcu.png" alt="Florida Gulf Coast University"> 
+         <div class="response" id="FGCUtext">
+    <p> Name: Florida Gulf Coast University</p>
+    <p> Location: Fort Myers, FL </p>
+    <p> In-state Tuition: $6,118 </p>
+    <p> Out-of-state Tuition: $25,161 </p>
+    <p> Room and Board: $9,672 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,700 </p>
+    <p> Personal: $1,700 </p>
+    <p> In-state Total: $20,390 </p>
+    <p> Out-of-state Total: $39,433 </p>
+    </div>
+    </div>
+    <div id="FIU" class="school">
+    <img class="photo" id="FIUpic" src="images/fiu.png" alt="Florida International University">  
+        <div class="response" id="FIUtext">
+         <p> Name: Florida International University</p>
+    <p> Location: Miami, FL </p>
+    <p> In-state Tuition: $6,557 </p>
+    <p> Out-of-state Tuition: $18,566 </p>
+    <p> Room and Board: $10,846 </p>
+    <p> Books: $1,540 </p>
+    <p> Transportation: $2,064 </p>
+    <p> Personal: $2,456 </p>
+    <p> In-state Total: $23,463 </p>
+    <p> Out-of-state Total: $35,472 </p>
+    </div>
+    </div>
+    <div id="FPU" class="school">
+    <img class="photo" id="FPUpic" src="images/fpu.jpg" alt="Florida Polytchnic University"> 
+        <div class="response" id="FPUtext">
+         <p> Name: Florida Polytechnic Universiry</p>
+    <p> Location: Lakeland, FL </p>
+    <p> In-state Tuition: $4,940 </p>
+    <p> Out-of-state Tuition: $4,940 </p>
+    <p> Room and Board: $11,400 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $2,000 </p>
+    <p> Personal: $2,000 </p>
+    <p> In-state Total: $21,540 </p>
+    <p> Out-of-state Total: $21,540 </p>
+    </div>    
+    </div>
+    <div id="FSU" class="school">
+    <img class="photo" id="FSUpic" src="images/fsu.png" alt="Florida State University">  
+        <div class="response" id="FSUtext">
+         <p> Name: Florida State Universiry</p>
+    <p> Location: Tallahassee, FL </p>
+    <p> In-state Tuition: $5,656 </p>
+    <p> Out-of-state Tuition: $21,676 </p>
+    <p> Room and Board: $10,304 </p>
+    <p> Books: $1,000 </p>
+    <p> Transportation: $1,508 </p>
+    <p> Personal: $3,256 </p>
+    <p> In-state Total: $21,724 </p>
+    <p> Out-of-state Total: $37,744 </p>
+    </div>
+    </div>
+    <div id="NCF" class="school">
+    <img class="photo" id="NCFpic" src="images/ncf.jpg" alt="New College of Florida"> 
+        <div class="response" id="NCFtext">
+         <p> Name: New College of Florida</p>
+    <p> Location: Sarasota, FL </p>
+    <p> In-state Tuition: $6,916 </p>
+    <p> Out-of-state Tuition: $29,944 </p>
+    <p> Room and Board: $9,009 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,100 </p>
+    <p> Personal: $2,170 </p>
+    <p> In-state Total: $20,395 </p>
+    <p> Out-of-state Total: $43,423 </p>
+    </div>    
+    </div>
+    <div id="UCF" class="school">
+    <img class="photo" id="UCFpic" src="images/ucf.png" alt="University of Central Florida">  
+        <div class="response" id="UCFtext">    
+    <p> Name: University of Central Florida</p>
+    <p> Location: Orlando, FL </p>
+    <p> In-state Tuition: $5,954 </p>
+    <p> Out-of-state Tuition: $22,466 </p>
+    <p> Room and Board: $9,764 </p>
+    <p> Books: $1,152 </p>
+    <p> Transportation: $1,866 </p>
+    <p> Personal: $3,104 </p>
+    <p> In-state Total: $21,840 </p>
+    <p> Out-of-state Total: $38,352 </p>
+    </div>
+    </div>
+    <div id="UF" class="school">
+    <img class="photo" id="UFpic" src="images/uf.jpg" alt="University of Florida"> 
+        <div class="response" id="UFtext">
+         <p> Name: University of Florida</p>
+    <p> Location: Gainesville, FL </p>
+    <p> In-state Tuition: $6,380 </p>
+    <p> Out-of-state Tuition: $28,658 </p>
+    <p> Room and Board: $9,890 </p>
+    <p> Books: $1,210 </p>
+    <p> Transportation: $1,090 </p>
+    <p> Personal: $2,660 </p>
+    <p> In-state Total: $21,230 </p>
+    <p> Out-of-state Total: $43,508 </p>
+    </div>
+    </div>
+    <div id="UNF" class="school">
+    <img class="photo" id="UNFpic" src="images/unf.gif" alt="University of North Florida">  
+        <div class="response" id="UNFtext">
+         <p> Name: University of North Florida</p>
+    <p> Location: Jacksonville, FL </p>
+    <p> In-state Tuition: $6,590 </p>
+    <p> Out-of-state Tuition: $20,797 </p>
+    <p> Room and Board: $9,772 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,036 </p>
+    <p> Personal: $2,808 </p>
+    <p> In-state Total: $21,406 </p>
+    <p> Out-of-state Total: $35,613 </p>
+    </div>
+    </div>
+    <div id="USFSP" class="school">
+    <img class="photo" id="USFSPpic" src="images/usfsp.jpg" alt="University of South Florida, St. Petersberg"> 
+        <div class="response" id="USFSPtext">
+         <p> Name: University of South Florida, St. Petersburg</p>
+    <p> Location: St. Petersburg, FL </p>
+    <p> In-state Tuition: $5,820 </p>
+    <p> Out-of-state Tuition: $16,725 </p>
+    <p> Room and Board: $9,700 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,600 </p>
+    <p> Personal: $2,500 </p>
+    <p> In-state Total: $20,820 </p>
+    <p> Out-of-state Total: $31,725 </p>
+    </div>
+    </div>
+    <div id="USF" class="school">
+    <img class="photo" id="USFpic" src="images/usf.png" alt="University of South Florida, Tampa">  
+        <div class="response" id="USFtext">
+         <p> Name: University of South Florida</p>
+    <p> Location: Tampa, FL </p>
+    <p> In-state Tuition: $6,410 </p>
+    <p> Out-of-state Tuition: $17,324 </p>
+    <p> Room and Board: $9,700 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,600 </p>
+    <p> Personal: $2,500 </p>
+    <p> In-state Total: $21,410 </p>
+    <p> Out-of-state Total: $32,324 </p>
+    </div>
+    </div>
+    <div id="UWF" class="school">
+    <img class="photo" id="UWFpic" src="images/uwf.png" alt="University of West Florida"> 
+        <div class="response" id="UWFtext">
+         <p> Name: University of West Florida</p>
+    <p> Location: Pensacola, FL </p>
+    <p> In-state Tuition: $6,356 </p>
+    <p> Out-of-state Tuition: $19,451 </p>
+    <p> Room and Board: $9,354 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $1,050 </p>
+    <p> Personal: $2,100 </p>
+    <p> In-state Total: $20,060 </p>
+    <p> Out-of-state Total: $33,155 </p>
+    </div>
+    </div>
+    <div id="UM" class="school">
+    <img class="photo" id="UMpic" src="images/um.png" alt="University of Miami">  
+        <div class="response" id="UMtext">
+         <p> Name: University of Miami</p>
+    <p> Location: Coral Gables, FL </p>
+    <p> In-state Tuition: $45,600 </p>
+    <p> Out-of-state Tuition: $47,004 </p>
+    <p> Room and Board: $13,310 </p>
+    <p> Books: $930 </p>
+    <p> Transportation: $962 </p>
+    <p> Personal: $2,100 </p>
+    <p> In-state Total: $62,902 </p>
+    <p> Out-of-state Total: $64,306 </p>
+    </div>
+    </div>
+    <div id="NSU" class="school">
+    <img class="photo" id="NSUpic" src="images/nsu.png" alt="Nova Southeastern University"> 
+       <div class="response" id="NSUtext">
+         <p> Name: Nova Southeastern University</p>
+    <p> Location: Davie, FL </p>
+    <p> In-state Tuition: $27,986 </p>
+    <p> Out-of-state Tuition: $27,986 </p>
+    <p> Room and Board: $10,838 </p>
+    <p> Books: $1,000 </p>
+    <p> Transportation: $1,000 </p>
+    <p> Personal: $2,000 </p>
+    <p> In-state Total: $42,824 </p>
+    <p> Out-of-state Total: $42,824 </p>
+    </div>
+    </div>
+    <div id="KU" class="school">
+    <img class="photo" id="KUpic" src="images/ku.jpeg" alt="Keiser University"> 
+        <div class="response" id="KUtext">
+         <p> Name: Keiser University</p>
+    <p> Location: Fort Lauderdale, FL </p>
+    <p> In-state Tuition: $16,784 </p>
+    <p> Out-of-state Tuition: $16,784 </p>
+    <p> Room and Board: $8,352 </p>
+    <p> Books: $1,200 </p>
+    <p> Transportation: $880 </p>
+    <p> Personal: $2,000 </p>
+    <p> In-state Total: $29,216 </p>
+    <p> Out-of-state Total: $29,216 </p>
+    </div>
+    </div>
+    <div id="SLU" class="school">
+    <img class="photo" id="SLUpic" src="images/slu.jpg" alt="Saint Leo University"> 
+        <div class="response" id="SLUtext">
+         <p> Name: Saint Leo University</p>
+    <p> Location: St. Leo, FL </p>
+    <p> In-state Tuition: $20,150 </p>
+    <p> Out-of-state Tuition: $20,150 </p>
+    <p> Room and Board: $11,286 </p>
+    <p> Books: $1,720 </p>
+    <p> Transportation: $1,180 </p>
+    <p> Personal: $1,372 </p>
+    <p> In-state Total: $35,708 </p>
+    <p> Out-of-state Total: $35,708 </p>
+    </div>
+    </div>
 </div>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
     <script src="js/highcharts.js"></script>
